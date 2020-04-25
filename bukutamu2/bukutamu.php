@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $nama = $_POST['nama'];
 $komentar = $_POST['komentar'];
 $email=$_POST['email'];
@@ -27,6 +28,7 @@ fclose ($fp);
 if ($_POST['submit']) {
 header ("location: index.php");
 }
+ob_flush();
 ?>
 
 <?php
